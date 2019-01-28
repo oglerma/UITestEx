@@ -16,7 +16,30 @@ class SuccessScreen: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    /*************************************************
+     * T
+     **************************************************/
+    
+    let successTextView: UITextView = {
+        let fulltext = UITextView()
+        let font = UIFont.systemFont(ofSize: 20)
+        //Set the first world
+        let attributedTitle = NSMutableAttributedString(string: "You are here",
+                                                        attributes: [NSAttributedString.Key.foregroundColor: UIColor.white,
+                                                                     NSAttributedString.Key.font: font])
+        
+        fulltext.attributedText = attributedTitle
+        fulltext.isEditable = false
+        fulltext.isScrollEnabled = false
+        fulltext.textAlignment = .center
+        
+        // There is a white box area around this text field. So setting it to
+        // clear makes it show correctly.
+        fulltext.backgroundColor = UIColor.clear
+        
+        return fulltext
+        
+    }()
     
     
     /*

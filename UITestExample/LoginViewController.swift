@@ -41,6 +41,9 @@ class LoginViewController: UIViewController {
         // clear makes it show correctly.
         fulltext.backgroundColor = UIColor.clear
         
+        // Adding a accessability Label for Conducting UITest
+        fulltext.accessibilityLabel = "LoginTextLabel"
+        
         return fulltext
         
     }()
@@ -58,6 +61,9 @@ class LoginViewController: UIViewController {
         e.borderStyle = .roundedRect
         e.layer.borderWidth = 1.5
         e.layer.borderColor = UIColor.black.cgColor
+        
+        // Adding a accessability Label for Conducting UITest
+        e.accessibilityLabel = "emailLabel"
         return e
     }()
     
@@ -76,6 +82,10 @@ class LoginViewController: UIViewController {
         p.layer.borderWidth = 1.5
         p.layer.borderColor = UIColor.black.cgColor
         
+        
+        // Adding a accessability Label for Conducting UITest
+        p.accessibilityLabel = "passwordLabel"
+        
         return p
     }()
     
@@ -83,6 +93,9 @@ class LoginViewController: UIViewController {
         let l = UIButton(type: .system)
         l.setTitleColor(.white, for: .normal)
         l.setTitle("Log In", for: .normal)
+        
+        // Adding a accessability Label for Conducting UITest
+        l.accessibilityLabel = "loginbtnLabel"
         return l
     }()
     
@@ -90,6 +103,8 @@ class LoginViewController: UIViewController {
         let f = UIButton(type: .system)
         f.setTitleColor(.white, for: .normal)
         f.setTitle("Forgot password?", for: .normal)
+        // Adding a accessability Label for Conducting UITest
+        f.accessibilityLabel = "forgotPasswordLabel"
         return f
     }()
     
@@ -105,6 +120,9 @@ class LoginViewController: UIViewController {
                                                          attributes: [NSAttributedString.Key.foregroundColor: color,
                                                                       NSAttributedString.Key.font: font]))
         h.setAttributedTitle(attributedTitle, for: .normal)
+        
+        // Adding a accessability Label for Conducting UITest
+        h.accessibilityLabel = "dontHaveAccountLabel"
         return h
     }()
     
@@ -116,7 +134,7 @@ class LoginViewController: UIViewController {
      **************************************************/
     fileprivate func setUpInputFields(){
         
-        setInitalLogo()
+        setupLoginTitleText()
         textInputStackView()
         setupHaveAccountButton()
         
@@ -124,9 +142,9 @@ class LoginViewController: UIViewController {
     
     
     /*************************************************
-     * SETTING THE INITIAL LOGO INTO THE VIEW (Stack 01)
+     * SETTING THE INITIAL TITLE TEXT INTO THE VIEW (Stack 01)
      **************************************************/
-    fileprivate func setInitalLogo(){
+    fileprivate func setupLoginTitleText(){
         
         view.addSubview(loginTitleText)
         loginTitleText.anchors(top: view.firstBaselineAnchor, topPad: 100,

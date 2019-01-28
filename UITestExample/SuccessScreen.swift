@@ -13,11 +13,11 @@ class SuccessScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupCongratsScreen()
     }
     
     /*************************************************
-     * T
+     * successTextView label
      **************************************************/
     
     let successTextView: UITextView = {
@@ -40,6 +40,16 @@ class SuccessScreen: UIViewController {
         return fulltext
         
     }()
+    
+    
+    private func setupCongratsScreen(){
+        view.addSubview(successTextView)
+        successTextView.anchors(top: view.centerYAnchor, topPad: 0,
+                                bottom: nil, bottomPad: 40,
+                                left: view.leftAnchor, leftPad: 12,
+                                right: view.rightAnchor, rightPad: 12,
+                                height: 30, width: 0)
+    }
     
     
     /*

@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
         let fulltext = UITextView()
         let font = UIFont.systemFont(ofSize: 45)
         //Set the first world
-        let attributedTitle = NSMutableAttributedString(string: "UITestEx",
+        let attributedTitle = NSMutableAttributedString(string: "UITest Example",
                                                         attributes: [NSAttributedString.Key.foregroundColor: UIColor.white,
                                                                      NSAttributedString.Key.font: font])
         
@@ -154,8 +154,6 @@ class LoginViewController: UIViewController {
     }()
     
     
-    
-    
     /*************************************************
      * CALLS ALL THE VIEWS IN THE LOGINPAGE
      **************************************************/
@@ -176,8 +174,8 @@ class LoginViewController: UIViewController {
         view.addSubview(loginTitleText)
         loginTitleText.anchors(top: view.firstBaselineAnchor, topPad: 100,
                                  bottom: nil, bottomPad: 0,
-                                 left: view.leftAnchor, leftPad: 70,
-                                 right: view.rightAnchor, rightPad: 70,
+                                 left: view.leftAnchor, leftPad: 20,
+                                 right: view.rightAnchor, rightPad: 20,
                                  height: 80, width: 0)
         
     }
@@ -217,12 +215,7 @@ class LoginViewController: UIViewController {
                                    height: 30, width: 0)
         
     }
-    
-    
-    
-    
-    
-    
+
     /*************************************************
      * THIS IS FOR THE ACTUAL PHONES TIME AND OTHER STUFF
      * ON THE TOP OF THE SCREEN

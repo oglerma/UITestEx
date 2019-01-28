@@ -26,6 +26,23 @@ class UITestExampleUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    func testAlertScreen(){
+        
+    }
+    
+    func testLoginSuccessScreen(){
+        
+    }
+    
+    func testFailedLogin(){
+        
+    }
+    
+    func testAccessability(){
+        
+    }
+    
+    
 
 
 }

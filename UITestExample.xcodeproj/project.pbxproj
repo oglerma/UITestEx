@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E904C4CC21FE8A3A00CE106F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E904C4CB21FE8A3A00CE106F /* LoginViewController.swift */; };
 		E904C4D021FE8C5500CE106F /* AutoLayoutExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E904C4CF21FE8C5500CE106F /* AutoLayoutExt.swift */; };
+		E904C4D221FE905E00CE106F /* SuccessScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E904C4D121FE905E00CE106F /* SuccessScreen.swift */; };
 		E96F1EE321F6AEFC00A464CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F1EE221F6AEFC00A464CF /* AppDelegate.swift */; };
 		E96F1EEA21F6AEFE00A464CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E96F1EE921F6AEFE00A464CF /* Assets.xcassets */; };
 		E96F1EED21F6AEFE00A464CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E96F1EEB21F6AEFE00A464CF /* LaunchScreen.storyboard */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		E904C4CB21FE8A3A00CE106F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E904C4CF21FE8C5500CE106F /* AutoLayoutExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutExt.swift; sourceTree = "<group>"; };
+		E904C4D121FE905E00CE106F /* SuccessScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessScreen.swift; sourceTree = "<group>"; };
 		E96F1EDF21F6AEFC00A464CF /* UITestExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITestExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96F1EE221F6AEFC00A464CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E96F1EE921F6AEFE00A464CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,8 +80,8 @@
 		E96F1ED621F6AEFC00A464CF = {
 			isa = PBXGroup;
 			children = (
-				E904C4CE21FE8C3400CE106F /* Core */,
 				E96F1EE121F6AEFC00A464CF /* UITestExample */,
+				E904C4CE21FE8C3400CE106F /* Core */,
 				E96F1EF621F6AEFE00A464CF /* UITestExampleUITests */,
 				E96F1EE021F6AEFC00A464CF /* Products */,
 			);
@@ -99,6 +101,7 @@
 			children = (
 				E904C4CD21FE8A7000CE106F /* Supporting Files */,
 				E904C4CB21FE8A3A00CE106F /* LoginViewController.swift */,
+				E904C4D121FE905E00CE106F /* SuccessScreen.swift */,
 			);
 			path = UITestExample;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				E904C4D021FE8C5500CE106F /* AutoLayoutExt.swift in Sources */,
 				E904C4CC21FE8A3A00CE106F /* LoginViewController.swift in Sources */,
 				E96F1EE321F6AEFC00A464CF /* AppDelegate.swift in Sources */,
+				E904C4D221FE905E00CE106F /* SuccessScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8F9MG3W29J;
 				INFOPLIST_FILE = "$(SRCROOT)/UITestExample/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -386,6 +391,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8F9MG3W29J;
 				INFOPLIST_FILE = "$(SRCROOT)/UITestExample/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

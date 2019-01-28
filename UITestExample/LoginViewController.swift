@@ -14,38 +14,29 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = #colorLiteral(red: 0.4168041348, green: 1, blue: 0.5136255026, alpha: 1)
         setUpInputFields()
     }
     
     
     /*************************************************
      * TEXTVIEWS,TEXTFIELDS AND BUTTONS
-     * MAPITINITIALTEXT, EMAIL, PASSWORD, LOGIN, FORGOTPASSWORD & HAVEACCOUNTBUTTON
+     * INITIALTEXT, EMAIL, PASSWORD, LOGIN, FORGOTPASSWORD & HAVEACCOUNTBUTTON
      **************************************************/
     
-    let mapItInitialText: UITextView = {
+    let loginTitleText: UITextView = {
         let fulltext = UITextView()
-        let font = UIFont.systemFont(ofSize: 50)
+        let font = UIFont.systemFont(ofSize: 45)
         //Set the first world
-        let attributedTitle = NSMutableAttributedString(string: "Map ",
+        let attributedTitle = NSMutableAttributedString(string: "UITestEx",
                                                         attributes: [NSAttributedString.Key.foregroundColor: UIColor.white,
                                                                      NSAttributedString.Key.font: font])
-        
-        // Make an image to attach to String by converting image
-        // into a NSAttributed string
-        let imageNextToString = NSTextAttachment()
-        imageNextToString.image = UIImage(named: "mapitLogo.png")
-        imageNextToString.adjustsImageSizeForAccessibilityContentSizeCategory = true
-        imageNextToString.bounds = CGRect(x: 0, y: 0, width: 60, height: 60)
-        let image = NSAttributedString(attachment: imageNextToString)
-        
-        
-        attributedTitle.append(image)
         
         fulltext.attributedText = attributedTitle
         fulltext.isEditable = false
         fulltext.isScrollEnabled = false
         fulltext.textAlignment = .center
+        
         // There is a white box area around this text field. So setting it to
         // clear makes it show correctly.
         fulltext.backgroundColor = UIColor.clear
@@ -137,8 +128,8 @@ class LoginViewController: UIViewController {
      **************************************************/
     fileprivate func setInitalLogo(){
         
-        view.addSubview(mapItInitialText)
-        mapItInitialText.anchors(top: view.firstBaselineAnchor, topPad: 100,
+        view.addSubview(loginTitleText)
+        loginTitleText.anchors(top: view.firstBaselineAnchor, topPad: 100,
                                  bottom: nil, bottomPad: 0,
                                  left: view.leftAnchor, leftPad: 70,
                                  right: view.rightAnchor, rightPad: 70,

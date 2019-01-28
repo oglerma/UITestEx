@@ -4,17 +4,19 @@
 //
 //  Created by Ociel Lerma on 1/27/19.
 //  Copyright © 2019 Ociel Lerma. All rights reserved.
-//
+
 
 import UIKit
 
 class LoginViewController: UIViewController {
     
  
+    let userName = "FakeName"
+    let passWord = "1234"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = #colorLiteral(red: 0.4168041348, green: 1, blue: 0.5136255026, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.6394235492, green: 0.8606024384, blue: 0.7869601846, alpha: 1)
         setUpInputFields()
     }
     
@@ -93,11 +95,36 @@ class LoginViewController: UIViewController {
         let l = UIButton(type: .system)
         l.setTitleColor(.white, for: .normal)
         l.setTitle("Log In", for: .normal)
+        l.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
         
         // Adding a accessability Label for Conducting UITest
         l.accessibilityLabel = "loginbtnLabel"
         return l
     }()
+    
+    @objc func handleLogin(){
+       
+        print("Inside handleLogin")
+        
+        guard let userInputEmail = emailTextField.attributedText?.string else {return}
+        guard let userpassWordInput = passwordTextField.attributedText?.string else {return}
+        
+        print("This is our email \(userInputEmail) and this is our password \(userpassWordInput)")
+        
+        
+        if userpassWordInput != userName && userInputEmail != passWord {
+            presentAlert(with: "ERROR", message: "This is not correct")
+        }
+
+        
+    }
+    
+    private func presentAlert(with title: String, message: String){
+        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertVC.addAction(.init(title: "OK", style: .default, handler: nil))
+        present(alertVC, animated: true)
+        
+    }
     
     let forgotPasswordButton: UIButton = {
         let f = UIButton(type: .system)
@@ -109,7 +136,7 @@ class LoginViewController: UIViewController {
     }()
     
     let dontHaveAccountBtn: UIButton = {
-        let color = UIColor.green
+        let color = UIColor.black
         let font = UIFont.systemFont(ofSize: 16)
         let h = UIButton(type: .system)
         // This allows us to put an extra color not conflicting with what is already out in this Page View
@@ -190,6 +217,11 @@ class LoginViewController: UIViewController {
                                    height: 30, width: 0)
         
     }
+    
+    
+    
+    
+    
     
     /*************************************************
      * THIS IS FOR THE ACTUAL PHONES TIME AND OTHER STUFF

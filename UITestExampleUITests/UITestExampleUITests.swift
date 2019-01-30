@@ -10,23 +10,54 @@ import XCTest
 
 class UITestExampleUITests: XCTestCase {
 
+    
+    let accessID = AccessIdentifiers()
+    let user     = User()
+    
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        
+        
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    
+    /*********************************************
+     * Inuputing the wrong Username and password
+     **************************************************/
     func testAlertScreen(){
+        
+        let app = XCUIApplication()
+
+        // Tap email and write something wrong
+        app.textFields["\(accessID.emailID)"].tap()
+        app.typeText("\(user.wrongEmail)")
+        app.textViews["\(accessID.loginTitleID)"].tap()
+
+        
+        // Tap password field and type something wrong
+        let passwordTextField = app.secureTextFields["\(accessID.passwordID)"]
+        XCTAssert(passwordTextField.exists,"Sorry it password does not exist")
+        passwordTextField.tap()
+        passwordTextField.typeText("asfl;)")
+        app.textViews["\(accessID.loginTitleID)"].tap()
+        
+        
+        // tap on loginbutton
+        app/*@START_MENU_TOKEN@*/.buttons["LoginButtonID"]/*[[".buttons[\"loginbtnLabel\"]",".buttons[\"LoginButtonID\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        XCTAssert(app.alerts["ERROR"].buttons["OK"].exists, "Alert is not appearing")
+        
+    }
+    
+    
+    
+    func testTiTleExists(){
+        
         
     }
     

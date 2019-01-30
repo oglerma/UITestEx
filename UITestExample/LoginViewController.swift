@@ -45,6 +45,7 @@ class LoginViewController: UIViewController {
         
         // Adding a accessability Label for Conducting UITest
         fulltext.accessibilityLabel = "LoginTextLabel"
+        fulltext.accessibilityIdentifier = "LoginID"
         
         return fulltext
         
@@ -66,6 +67,7 @@ class LoginViewController: UIViewController {
         
         // Adding a accessability Label for Conducting UITest
         e.accessibilityLabel = "emailLabel"
+        e.accessibilityIdentifier = "emailID"
         return e
     }()
     
@@ -87,6 +89,7 @@ class LoginViewController: UIViewController {
         
         // Adding a accessability Label for Conducting UITest
         p.accessibilityLabel = "passwordLabel"
+        p.accessibilityIdentifier = "pID"
         
         return p
     }()
@@ -99,6 +102,7 @@ class LoginViewController: UIViewController {
         
         // Adding a accessability Label for Conducting UITest
         l.accessibilityLabel = "loginbtnLabel"
+        l.accessibilityIdentifier = "LoginButtonID"
         return l
     }()
     
@@ -114,6 +118,10 @@ class LoginViewController: UIViewController {
         
         if userpassWordInput != userName && userInputEmail != passWord {
             presentAlert(with: "ERROR", message: "This is not correct")
+            
+           
+        } else {
+             self.performSegue(withIdentifier: "toSuccessScreen", sender: nil)
         }
 
         
@@ -132,6 +140,7 @@ class LoginViewController: UIViewController {
         f.setTitle("Forgot password?", for: .normal)
         // Adding a accessability Label for Conducting UITest
         f.accessibilityLabel = "forgotPasswordLabel"
+        f.accessibilityIdentifier = "forgotPasswordID"
         return f
     }()
     
@@ -150,6 +159,7 @@ class LoginViewController: UIViewController {
         
         // Adding a accessability Label for Conducting UITest
         h.accessibilityLabel = "dontHaveAccountLabel"
+        h.accessibilityIdentifier = "dontHaveAccountID"
         return h
     }()
     

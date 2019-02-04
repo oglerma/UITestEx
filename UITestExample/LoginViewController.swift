@@ -11,8 +11,8 @@ import UIKit
 class LoginViewController: UIViewController {
     
  
-    let userName = "FakeName"
-    let passWord = "1234"
+    let userName = "ebayemail@gmail.com"
+    let passWord = "12345"
     
     override func viewDidLoad() {
         super.viewDidLoad()
